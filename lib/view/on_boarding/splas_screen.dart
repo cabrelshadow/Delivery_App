@@ -15,7 +15,7 @@ class SlpaScreen extends StatefulWidget {
 
   }
   void goWelcomePage()async{
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 7));
   }
   State<SlpaScreen> createState() => _SlpaScreenState();
 }
