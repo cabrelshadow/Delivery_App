@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:meal_delivery/constante/color_extention.dart';
 import 'package:meal_delivery/constante/image_string.dart';
 import 'package:meal_delivery/view/common_widget/rounded_button.dart';
+import 'package:meal_delivery/view/login/reset_password.dart';
+import 'package:meal_delivery/view/login/signupScreen.dart';
 
 import '../common_widget/Rounded_buttonWith_Icon.dart';
 import '../common_widget/rounded_textfield.dart';
@@ -17,6 +19,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController txtEmail=TextEditingController();
   TextEditingController txtPassword=TextEditingController();
+
+  get onPressed => null;
 
   @override
   Widget build(BuildContext context) {
@@ -45,15 +49,18 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 40,),
               Rounded_TextField(controller: txtEmail, title: "Your Email",),
               const SizedBox(height: 20,),
-              Rounded_TextField(controller: txtPassword, title: "Your password",),
+              Rounded_TextField(controller: txtPassword, title: "Your password",obscureText: true,),
               const SizedBox(height: 38,),
               round_button(title: "login", onPressed: (){},type: round_buttonType.bgPrimary,),
               const SizedBox(height: 20,),
               Center(
-                child: Text("Forgot your password?",textAlign: TextAlign.center,style: TextStyle(
-                    fontSize: 16,
-                    color: TColor.secondaryText
-                ),),
+                child:InkWell(
+                  onTap: (){ Navigator.push(context, MaterialPageRoute(builder:(context)=>ResetPasswordScreen()));},
+                  child: Text("Forgot your password?",textAlign: TextAlign.center,style: TextStyle(
+                      fontSize: 16,
+                      color: TColor.secondaryText
+                  ),),
+                ),
               ),
               const SizedBox(height: 40,),
               Center(
@@ -64,9 +71,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               //*********************************bouton avec icons facebook et googl***************************************
               const SizedBox(height: 40,),
-              const Rouded_buttonWitthIcon(title: "Login with Facebook", image:facebook_logo,),
+               Rouded_buttonWitthIcon(title: "Login with Facebook", image:facebook_logo, onPressed: () {  },),
               const SizedBox(height: 30,),
-              const Rouded_buttonWitthIcon(title: "Login with google", image:google_logo,type:rouded_buttonWithIcon.bgRed,),
+         Rouded_buttonWitthIcon(title: "Login with google", image:google_logo,type:rouded_buttonWithIcon.bgRed, onPressed: () { },),
               //***********************************************************************
 
               //*********************************have an account?***************************************
@@ -77,11 +84,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Text("Don't have an Account?",textAlign: TextAlign.center),
                     SizedBox(width: 2,),
-                    Text("Sign Up",textAlign: TextAlign.center,style:TextStyle(
-                      color: TColor.primary,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15
-                    ),),
+                    InkWell(
+                      onTap: (){    Navigator.push(context, MaterialPageRoute(builder:(context)=>SignUpScreen()));},
+
+                      child: Text("Sign Up",textAlign: TextAlign.center,style:TextStyle(
+                        color: TColor.primary,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15
+                      ),),
+                    ),
 
                   ],
                 ),
