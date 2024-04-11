@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_delivery/view/login/login_screen.dart';
+import 'package:meal_delivery/view/on_boarding/on_boarding_screen.dart';
 
 import 'view/on_boarding/splas_screen.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SlpaScreen(),
+      home: OnboardingScreen(),
     );
   }
 }
