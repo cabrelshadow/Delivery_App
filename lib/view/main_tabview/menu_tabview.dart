@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_delivery/constante/color_extention.dart';
 import 'package:meal_delivery/constante/image_string.dart';
 import 'package:meal_delivery/view/home/home_screen.dart';
+import 'package:meal_delivery/view/menu/Menu_items.dart';
 import 'package:meal_delivery/view/profile/profileScreen.dart';
 
 import '../common_widget/tabButton.dart';
@@ -64,7 +65,7 @@ class _MenuTabviewState extends State<MenuTabview> {
                 onTap: () {
                   if (selctTab != 0) {
                     selctTab = 0;
-                    selectPageView = const ProfileScreen();
+                    selectPageView = MenuItems();
                   }
                   if (mounted) {
                     setState(() {});
