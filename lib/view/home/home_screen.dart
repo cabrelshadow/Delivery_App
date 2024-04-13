@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_delivery/constante/color_extention.dart';
@@ -61,7 +59,6 @@ class _HommeScreenState extends State<HommeScreen> {
                   ),
 
                 SizedBox(height: 40,),
-
            Container(
                       height: 60,
                    decoration: BoxDecoration(
@@ -94,8 +91,7 @@ class _HommeScreenState extends State<HommeScreen> {
                  ),
 
                 SizedBox(height: 30,),
-                //======================cart items withe one title center================//
-                SizedBox(height: media.width *0.4,
+                SizedBox(height: 150,
 
                  child: ListView.builder(
                    scrollDirection: Axis.horizontal,
@@ -121,14 +117,14 @@ class _HommeScreenState extends State<HommeScreen> {
 
                  )
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 40,),
                 //=======================title for popular restaurent================//
              const view_all_tile(title: "Popular Restaurents", linkTile: "View all",),
                 SizedBox(height:30,),
                 //======================================//
 
                 //=====================poular restaurent scrollView=================//
-                SizedBox(height: media.height *0.3,
+                SizedBox(height: 250,
 
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
@@ -143,12 +139,11 @@ class _HommeScreenState extends State<HommeScreen> {
                 ),
                 //=====================end=================//
                 //=======================Must popular title================//
-                SizedBox(height:30,),
                 const view_all_tile(title: "Must popular", linkTile: "View all",),
                 SizedBox(height: 30,),
                 //=====================end=================//
                 //=====================Must poular restaurent scrollView=================//
-                SizedBox(height: media.height *0.3,
+                SizedBox(height: 250,
 
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
@@ -166,39 +161,6 @@ class _HommeScreenState extends State<HommeScreen> {
 
                 //=========================recette item=====================//
                 const view_all_tile(title: "Recent item", linkTile: "View all",),
-                ListView.builder(
-                   physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount:2,
-                    itemBuilder: (context,index){
-                 //     var pupularCard=pupular_Restaurent[index] as Map ? ?? {};
-
-                      return Container(
-                        child: Row(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(item_1,fit: BoxFit.cover,width: 70, height: 70,),
-                            ),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Text("Mulberry Pizza by Josh",style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w800,
-
-                                  ),)
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      );
-                    }
-
-                )
-
-
 
               ],
             ),

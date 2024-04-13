@@ -17,7 +17,7 @@ class view_all_tile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title,style: TextStyle(
-          fontSize: 20,
+          fontSize: 25,
           fontWeight: FontWeight.w400,
         ),),
         Text(linkTile,style: TextStyle(
