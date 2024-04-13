@@ -91,7 +91,7 @@ class _HommeScreenState extends State<HommeScreen> {
                  ),
 
                 SizedBox(height: 30,),
-                SizedBox(height: 150,
+                SizedBox(height: media.height*0.2,
 
                  child: ListView.builder(
                    scrollDirection: Axis.horizontal,
@@ -124,7 +124,7 @@ class _HommeScreenState extends State<HommeScreen> {
                 //======================================//
 
                 //=====================poular restaurent scrollView=================//
-                SizedBox(height: 250,
+                SizedBox(height: media.height*0.3,
 
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
@@ -137,13 +137,15 @@ class _HommeScreenState extends State<HommeScreen> {
 
                     )
                 ),
+                SizedBox(height:30,),
+
                 //=====================end=================//
                 //=======================Must popular title================//
                 const view_all_tile(title: "Must popular", linkTile: "View all",),
                 SizedBox(height: 30,),
                 //=====================end=================//
                 //=====================Must poular restaurent scrollView=================//
-                SizedBox(height: 250,
+                SizedBox(height: media.height*0.3,
 
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
@@ -156,9 +158,9 @@ class _HommeScreenState extends State<HommeScreen> {
 
                     )
                 ),
-                SizedBox(height: 20,),
-                //=====================end=================//
 
+                //=====================end=================//
+                SizedBox(height:30,),
                 //=========================recette item=====================//
                 const view_all_tile(title: "Recent item", linkTile: "View all",),
 

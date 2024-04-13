@@ -15,6 +15,7 @@ class Poular_restaurentCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var media=MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
@@ -22,7 +23,7 @@ class Poular_restaurentCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
-            child: Image.asset(dataRestaurent["image"].toString(),fit: BoxFit.cover,height: 190,width: 300,),
+            child: Image.asset(dataRestaurent["image"].toString(),fit: BoxFit.cover,height: media.height*0.2,width: 300,),
           ),
           SizedBox(height: 10,),
           Column(
