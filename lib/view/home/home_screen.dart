@@ -52,7 +52,7 @@ class _HommeScreenState extends State<HommeScreen> {
              Row(
 
                     children: [
-                      Text("Current Location",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w800,color: TColor.secondaryText),),
+                      Text("Current Locations",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w800,color: TColor.secondaryText),),
                       SizedBox(width: 40,),
                       Image.asset(dropdown,width: 16,height: 16,)
                     ],
