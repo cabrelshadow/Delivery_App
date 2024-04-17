@@ -65,7 +65,7 @@ class _MenuTabviewState extends State<MenuTabview> {
                 onTap: () {
                   if (selctTab != 0) {
                     selctTab = 0;
-                    selectPageView = MenuItems();
+                    selectPageView =MenuView();
                   }
                   if (mounted) {
                     setState(() {});
